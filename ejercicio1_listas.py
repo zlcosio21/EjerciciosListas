@@ -8,4 +8,3 @@ def operations_list(list1, list2):
     sum_result = sum(list1) + sum(list2)
     sub_result = sum(list1) - sum(list2)
     return sum_result, sub_result
-    
