@@ -1,13 +1,10 @@
 # Given a list of 10 integers,
-# it is required to print those numbers
-# in reverse order to which they were entered.
+# show the original list
+# and the inverse of this
 
 import random
 
 def reverse_list():
-    reverse_list = []
+    list_ = list(random.randint(1, 100) for i in range(0, 10))
 
-    for i in range(0, 10):
-        reverse_list.append(random.randint(1, 1000))
-
-    return list(reversed(reverse_list))
+    return list_, list(reversed(list_))
