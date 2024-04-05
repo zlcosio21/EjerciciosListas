@@ -1,12 +1,13 @@
-#Dada una lista de 10 números enteros, se requiere imprimir esos números en orden inverso al que fueron ingresados.
+# Given a list of 10 integers,
+# it is required to print those numbers
+# in reverse order to which they were entered.
 
-lista = []
+import random
 
-for i in range(1, 10 + 1):
-  n = int(input(f"Ingrese el valor del elemento {i} de la lista: "))
-  lista.append(n)
+def reverse_list():
+    reverse_list = []
 
-print(lista)
+    for i in range(0, 10):
+        reverse_list.append(random.randint(1, 1000))
 
-for e in range(len(lista)-1,-1,-1):
-  print(lista[e])
+    return list(reversed(reverse_list))
