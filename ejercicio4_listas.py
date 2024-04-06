@@ -1,26 +1,19 @@
-#Dada dos listas de caracteres, se requiere contar las diferencias entre ellas y mostrar dicho conteo. ○ Ejemplo: Si se tienen las listas [“A”, “B”, “C”] y [“A”, “E”, “H”], entonces el conteo sería 2 ya que hay dos diferencias. Nota: Las listas deben ser de igual longitud y esto debeser validado.
+# Given two lists of characters,
+# counting differences is required
+# between them and display said count.
+# ○ Example: If you have the lists
+# [“A”, “B”, “C”] and [“A”, “E”, “H”],
+# then the count would be 2 since
+# there are two differences.
+# Note: The lists must be of equal
+# length and this must be validated.
 
-lista1 = []
-lista2 = []
-cont_diferencias = 0
+import random
+import string
 
-cant_lista1 = int(input("Ingrese la cantidad de elementos de la lista 1: "))
-cant_lista2 = int(input("Ingrese la cantidad de elementos de la lista 2: "))
+def differences(range_lists):
+    list_1 = [random.choice(string.ascii_uppercase) for i in range(0, range_lists)]
+    list_2 = [random.choice(string.ascii_uppercase) for i in range(0, range_lists)]
+    count = sum([1 for i in list_1 if list_1[list_1.index(i)] != list_2[list_1.index(i)]])
 
-for i in range (1, cant_lista1 + 1):
-  elem_lista1 = input(f"Ingrese el valor del elemento {i} para la lista 1: ")
-  lista1.append(elem_lista1)
-for e in range (1, cant_lista2 + 1):
-  elem_lista2 = input(f"Ingrese el valor del elemento {e} para la lista 2: ")
-  lista2.append(elem_lista2)
-print(f"lista 1 = {lista1}")
-print(f"lista 2 = {lista2}")
-
-if len(lista1) == len(lista2):
-   for i in range(len(lista1)):
-    if lista1[i] != lista2[i]:
-      cont_diferencias += 1
-else:
-  print("Las 2 listas deben tener la misma longitud")
-
-print(f"Se encontraron {cont_diferencias} diferencias entre las 2 listas")
+    return list_1, list_2, count
