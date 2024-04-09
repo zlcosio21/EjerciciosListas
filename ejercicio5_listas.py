@@ -1,7 +1,7 @@
 #De una lista de números, identifique el que más se repite.
 
 n = int(input("Ingrese la cantidad de elementos de la lista: "))
-
+     
 lista = []
 numrepetido = []
 norepetido = []
